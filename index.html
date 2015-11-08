@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
-<ul>
+<ul  class="list-group">
 {% for post in site.posts %}
-    <li>
+    <li  class="list-group-item">
       <a href="{{ post.url }}"><div style="width:99px;padding:1px;float:left;">{% if post.image %}<img src="{{ post.image }}" width="100px">{% endif %}</div>{{ post.title }}</a>
     </li>
 {% endfor %}
