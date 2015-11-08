@@ -5,3 +5,4 @@ defaults:
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
       layout: "default"
+      is_post: true # automatically set is_post=true for all posts
