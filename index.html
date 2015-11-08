@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
-<ul  class="list-group">
+<ul class="list-unstyled">
 {% for post in site.posts %}
-    <li  class="list-group-item">
-      <a href="{{ post.url }}"><div style="width:99px;padding:1px;float:left;">{% if post.image %}<img src="{{ post.image }}" width="100px">{% endif %}</div>{{ post.title }}</a>
+    <li>
+      <a href="{{ post.url }}"><div style="width:99px;padding:1px;float:left;">{% if post.image %}<img src="{{ post.image }}" width="100px">{% endif %}</div><div>{{ post.title }}</div></a>
     </li>
 {% endfor %}
 </ul>
