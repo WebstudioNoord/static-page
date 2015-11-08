@@ -7,6 +7,10 @@
 <title>Hello World!</title>
 </head>
 <body>
+  
+{% for post in site.posts %}
+{% forloop.rindex0 %}
+{% endfor %}
 
 {% for i in (1..10) %}
 {{ i }}<br>
