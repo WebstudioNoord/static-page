@@ -50,11 +50,12 @@
           </div>
         </div>
         <div class="container">
-<div id="entry-list">
-<div class="row" style="margin-bottom:10px;">
+<div id="entry-list">	
+{% if page.is_post %}
+    <div class="row" style="margin-bottom:10px;">
 		<input type="text" class="search form-control" placeholder="Zoeken" />
-</div>
-
+    </div>
+{% endif %}
 {{ content }}
 </div>
 </div><!-- /.container -->
