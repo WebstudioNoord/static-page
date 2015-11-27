@@ -6,6 +6,6 @@ ingredients:
   - havermout
 nutrients:
   - vet: 0.5
-  - koolhydraat: 0.8
-  - suiker: 1
+  - eiwit: 0.8
+  - koolhydraat: 1
 ---
