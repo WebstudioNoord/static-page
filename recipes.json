@@ -5,6 +5,6 @@
 		"id": {{forloop.index}},
 		"title": {{col.title}},
 		"url": {{col.relative_path}},
-		"text": {{col.content}}
+		"text": {{col.output}}
 	}{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
 }
