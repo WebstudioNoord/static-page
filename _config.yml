@@ -1,7 +1,8 @@
 collections:
   recipes:
     output: true
-  - ingredients
+  ingredients:
+    output: true
 defaults:
   -
     scope:
