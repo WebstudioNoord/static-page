@@ -4,6 +4,6 @@
 	"recipes": [{% for col in site.collections.recipes.docs %}{
 		"id": {{forloop.index}},
 		"title": {{col.title}},
-		"url": {{col.url}}
+		"url": {{col.output}}
 	}{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
 }
