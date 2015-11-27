@@ -1,0 +1,13 @@
+---
+---
+{
+	"recipes": [
+		{% for collection in site.collections.recipes.docs %}
+		{
+			"id": {{forloop.index}},
+			"title": {{collection.title | jsonify}},
+			"url": {{collection.external_url | jsonify}}
+		}{% if forloop.rindex0 &gt; 0 %},{% endif %}
+		{% endfor %}
+	]
+}
