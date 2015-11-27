@@ -1,9 +1,9 @@
 ---
 ---
 {
-	"recipes": [{% for collection in site.collections.recipes.docs %}{
+	"recipes": [{% for col in site.collections.recipes.docs %}{
 		"id": {{forloop.index}},
-		"title": {{collection.name}},
-		"url": {{collection.external_url}}
+		"title": {{coll.name}},
+		"url": {{coll.path}}
 	}{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
 }
