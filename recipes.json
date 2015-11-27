@@ -3,7 +3,7 @@
 {
 	"recipes": [{% for col in site.collections.recipes.docs %}{
 		"id": {{forloop.index}},
-		"title": {{col.title | jsonify}},
+		"title": {{col.name | jsonify}},
 		"url": {{col.relative_path | jsonify}},
 		"text": {{col.output | jsonify}}
 	}{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
