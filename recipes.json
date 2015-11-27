@@ -5,5 +5,5 @@
 			"id": {{forloop.index}},
 			"title": {{collection.title | jsonify}},
 			"url": {{collection.external_url | jsonify}}
-	}{% if forloop.rindex0 &gt; 0 %},{% endif %}{% endfor %}]
+	}{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
 }
