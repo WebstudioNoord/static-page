@@ -3,7 +3,7 @@
 {
 	"recipes": [{% for col in site.collections.recipes.docs %}{
 		"id": {{forloop.index}},
-		"title": {{coll.name}},
-		"url": {{coll.path}}
+		"title": {{col.name}},
+		"url": {{col.path}}
 	}{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
 }
