@@ -8,5 +8,5 @@ defaults:
       is_post: true # automatically set is_post=true for all posts
       image: https://cloud.githubusercontent.com/assets/7868635/11022383/86fcdc7a-865d-11e5-9bee-4f61dc7a9a85.png
 collections:
-  recipes
+  - recipes
     output: true
