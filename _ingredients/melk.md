@@ -1,5 +1,5 @@
 ---
 vet: 10
 eiwit: 5
-koolhydraat: 7
+suiker: 7
 ---
