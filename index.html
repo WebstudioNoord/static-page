@@ -8,7 +8,137 @@ layout: default
     </li>
 {% endfor %}
 </ul>
+<div id="id01"></div>
 
+<script>
+var ingr={};
+myAjax();
+	
+function myFunction(arr) {
+	console.log(arr.toSource());
+	
+    var out = "";
+    var i;
+    
+    for(i = 0; i < arr.length; i++) {
+		var vet=0,eiwit=0,koolhydraat=0;
+        out += '<br><a href="http://staticgithubpage.tk'+arr[i].url+'">'+arr[i].title + '</a> ';
+        //out += arr[i].nutrients + '<br>';
+        var ingredients = arr[i].ingredients;
+        //(typeof ingredients != "undefined") ? console.log(ingredients[0]) : null;
+        if (typeof ingredients != "undefined") {
+			for(j = 0; j < ingredients.length; j++) {
+				
+				target=ingredients[j];
+		        for (var k in target){
+				    if (target.hasOwnProperty(k)) {
+						color="red";
+						if (typeof ingr[k] != "undefined") {
+							color="";
+							vet += ingr[k].vet*(target[k]/100);
+							eiwit += ingr[k].eiwit*(target[k]/100);
+							koolhydraat += ingr[k].koolhydraat*(target[k]/100);
+						}
+						out += " - <span style=color:"+color+";>" + k + ": " + target[k]+"</span>";
+				    }
+				}
+				
+				/*
+				if (typeof ingr[ingredients[j]] != "undefined") {
+					 out += ' '+ingr[ingredients[j]].title;
+					 vet += ingr[ingredients[j]].vet;
+					 eiwit += ingr[ingredients[j]].eiwit;
+					 koolhydraat += ingr[ingredients[j]].koolhydraat;
+				}
+				*/
+			}
+			out += ' vet: '+vet;
+			out += ' eiwit: '+eiwit;
+			out += ' koolhydraat: '+koolhydraat;
+		}
+    }
+    out += '<br><br><span style=color:red;>red:</span> unknown ingredient, nutrient information is not available.';
+    //out += '<br><br>------<br>Debug information<br>------<br>'+arr.toSource();
+    document.getElementById("id01").innerHTML = out;
+}
+
+function objArrToIdxArr(arr) {
+	console.log(arr.toSource());
+	
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+		ingr[arr[i].title]=arr[i]; 
+    }
+    console.log(ingr['melk'].vet);
+}
+	
+function myAjax() {
+	var xmlhttp = new XMLHttpRequest();
+	var url = "http://staticgithubpage.tk/recipes.json";
+	
+	// https://developer.mozilla.org/nl/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	
+	xmlhttp.addEventListener("load", transferComplete, false);
+	xmlhttp.addEventListener("error", transferFailed, false);
+	xmlhttp.addEventListener("abort", transferCanceled, false);
+	
+	xmlhttp.onreadystatechange = function() {
+	    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			var myObj = JSON.parse(xmlhttp.responseText);
+	        var myArr = myObj.recipes;
+	        var myIngredientsArr = myObj.ingredients;
+	        objArrToIdxArr(myIngredientsArr);
+	        myFunction(myArr);
+	    }
+	    else {
+			
+		}
+	};
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
+	
+	
+	function transferComplete(evt) {
+	  console.log("The transfer is complete.");
+	}
+	
+	function transferFailed(evt) {
+	  console.log("An error occurred while transferring the file.");
+	  setTimeout(function(){ myAjax();; }, 1000);
+	}
+	
+	function transferCanceled(evt) {
+	  console.log("The transfer has been canceled by the user.");
+	}
+	
+}
+
+function myFunctionOld(arr) {
+	console.log(arr.toSource());
+	
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        out += '<br><a href="http://staticgithubpage.tk'+arr[i].url+'">'+arr[i].title + '</a><br>';
+        //out += arr[i].nutrients + '<br>';
+        var nutrients = arr[i].nutrients;
+        (typeof nutrients != "undefined") ? console.log(nutrients[0].vet) : null;
+        if (typeof nutrients != "undefined") {
+			var j;
+			for(j = 0; j < nutrients.length; j++) {
+				target=nutrients[j];
+		        for (var k in target){
+				    if (target.hasOwnProperty(k)) {
+				         out += "- " + k + ": " + target[k]+ "<br>";
+				    }
+				}
+			}
+		}
+    }
+    //out += '<br><br>------<br>Debug information<br>------<br>'+arr.toSource();
+    document.getElementById("id01").innerHTML = out;
+}
+</script>
 <!--
 {% for i in (1..10) %}
 {{ i }}<br>
