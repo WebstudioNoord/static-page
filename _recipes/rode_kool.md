@@ -1,8 +1,8 @@
 ---
 title: Rode Kool
 ingredients:
-  zout
-  melk
-  cookies
+  - zout
+  - melk
+  - cookies
 ---
 rode kool
