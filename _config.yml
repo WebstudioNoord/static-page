@@ -4,12 +4,17 @@ collections:
   ingredients:
     output: true
 defaults:
-  -
-    scope:
+  - scope:
       path: "" # an empty string here means all files in the project
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
       layout: "default"
       is_post: true # automatically set is_post=true for all posts
       image: https://cloud.githubusercontent.com/assets/7868635/11022383/86fcdc7a-865d-11e5-9bee-4f61dc7a9a85.png
-
+  - scope:
+      path: "" 
+      type: "ingredients"
+    values:
+      vet: 0
+      eiwit: 0
+      suiker: 0
