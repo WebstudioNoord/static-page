@@ -5,6 +5,7 @@ comment:
 	"recipes": [{% for col in site.collections.recipes.docs %}
 	{{col | jsonify}}
 	{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
+}
 	{% comment %}
 	"recipes": [{% for col in site.collections.recipes.docs %}{
 		{{col | jsonify}},
@@ -14,4 +15,4 @@ comment:
 		"text": {{col.output | jsonify}}
 	}{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
 	{% endcomment %}
-}
+
