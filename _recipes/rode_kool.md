@@ -2,8 +2,8 @@
 title: Rode Kool
 weight: 500
 ingredients:
-  - azijn
-  - suiker
-  - rode kool
+  - azijn: 10
+  - suiker: 20
+  - rode kool: 250
 ---
 rode kool
