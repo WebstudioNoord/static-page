@@ -17,5 +17,4 @@ defaults:
     values:
       vet: 0
       eiwit: 0
-      suiker: 0
       koolhydraat: 0
