@@ -1,8 +1,7 @@
 ---
 title: havermoutpap
-weight: 600
 ingredients:
-  - melk
-  - suiker
-  - havermout
+  - melk: 500
+  - suiker: 25
+  - havermout: 100
 ---
