@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<ul class="list list-unstyled">
+
 
 {% for post in site.posts %}
     <li style="margin: 5px;">
@@ -30,7 +30,7 @@ function myFunction(arr) {
 	
     var out = "";
     var i;
-    
+out +=<ul class="list list-unstyled">';
 out +='<li style="margin: 5px;">';
 out +='<a href="/2015/11/08/first.html">';
 out +='<span style="display: inline-block;width: 100px;margin-right: 10px;">';
@@ -39,7 +39,7 @@ out +='</span>';
 out +='<span class="title">Tomatensoep</span>';
 out +='</a>';
 out +='</li>';
-    
+out +='</ul>';    
     
     for(i = 0; i < arr.length; i++) {
 		var vet=0,eiwit=0,koolhydraat=0;
@@ -171,7 +171,7 @@ function myFunctionOld(arr) {
 <div><h2><b>Oude Gerechten: </b></h2><br></div>
 <br>
 
-</ul>
+<!-- </ul> -->
 <!--
 {% for i in (1..10) %}
 {{ i }}<br>
