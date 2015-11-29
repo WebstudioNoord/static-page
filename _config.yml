@@ -18,3 +18,8 @@ defaults:
       vet: 0
       eiwit: 0
       koolhydraat: 0
+  - scope:
+      path: "" 
+      type: "recipes"
+    values:
+      image: https://cloud.githubusercontent.com/assets/7868635/11022383/86fcdc7a-865d-11e5-9bee-4f61dc7a9a85.png
