@@ -30,16 +30,15 @@ function myFunction(arr) {
 	
     var out = "";
     var i;
-out +='<ul class="list list-unstyled">';
-out +='<li style="margin: 5px;">';
-out +='<a href="/2015/11/08/first.html">';
-out +='<span style="display: inline-block;width: 100px;margin-right: 10px;">';
-out +='<img style="max-width: 100px;max-height: 69px;" src="https://cloud.githubusercontent.com/assets/7868635/9838279/e7a807aa-5a59-11e5-9b13-d31959067028.png">';
-out +='</span>';
-out +='<span class="title">Tomatensoep</span>';
-out +='</a>';
-out +='</li>';
-out +='</ul>';    
+    out +='<ul class="list list-unstyled">';
+    out +='<li style="margin: 5px;">';
+    out +='<a href="/2015/11/08/first.html">';
+    out +='<span style="display: inline-block;width: 100px;margin-right: 10px;">';
+    out +='<img style="max-width: 100px;max-height: 69px;" src="https://cloud.githubusercontent.com/assets/7868635/9838279/e7a807aa-5a59-11e5-9b13-d31959067028.png">';
+    out +='</span>';
+    out +='<span class="title">Tomatensoep</span>';
+    out +='</a>';
+    out +='</li>';
     
     for(i = 0; i < arr.length; i++) {
 		var vet=0,eiwit=0,koolhydraat=0;
@@ -163,6 +162,7 @@ function myFunctionOld(arr) {
 			}
 		}
     }
+    out +='</ul>';  
     //out += '<br><br>------<br>Debug information<br>------<br>'+arr.toSource();
     document.getElementById("id01").innerHTML = out;
 }
