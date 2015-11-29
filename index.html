@@ -11,16 +11,6 @@ layout: default
 
 <div id="id01"></div>
 
-<li style="margin: 5px;">
-<a href="/2015/11/08/first.html">
-<span style="display: inline-block;width: 100px;margin-right: 10px;">
-<img style="max-width: 100px;max-height: 69px;" src="https://cloud.githubusercontent.com/assets/7868635/9838279/e7a807aa-5a59-11e5-9b13-d31959067028.png">
-</span>
-<span class="title">Groentensoep</span>
-</a>
-</li>
-
-
 <script>
 var ingr={};
 myAjax();
@@ -138,33 +128,6 @@ function myAjax() {
 	  console.log("The transfer has been canceled by the user.");
 	}
 	
-}
-
-function myFunctionOld(arr) {
-	console.log(arr.toSource());
-	
-    var out = "";
-    var i;
-    for(i = 0; i < arr.length; i++) {
-        out += '<br><a href="http://staticgithubpage.tk'+arr[i].url+'">'+arr[i].title + '</a><br>';
-        //out += arr[i].nutrients + '<br>';
-        var nutrients = arr[i].nutrients;
-        (typeof nutrients != "undefined") ? console.log(nutrients[0].vet) : null;
-        if (typeof nutrients != "undefined") {
-			var j;
-			for(j = 0; j < nutrients.length; j++) {
-				target=nutrients[j];
-		        for (var k in target){
-				    if (target.hasOwnProperty(k)) {
-				         out += "- " + k + ": " + target[k]+ "<br>";
-				    }
-				}
-			}
-		}
-    }
-    out +='</ul>';  
-    //out += '<br><br>------<br>Debug information<br>------<br>'+arr.toSource();
-    document.getElementById("id01").innerHTML = out;
 }
 </script>
 <br><br>
