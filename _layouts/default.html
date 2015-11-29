@@ -78,7 +78,10 @@
 <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
 
 <script type="text/javascript">
-
+        	var options = {
+  			valueNames: ['title']
+		};
+		var entryList = new List('entry-list', options);
 </script>
         
         <!-- JavaScript jQuery code from Bootply.com editor  -->
@@ -86,10 +89,7 @@
         <script type='text/javascript'>
         
         $(document).ready(function() {
-        	var options = {
-  			valueNames: ['title']
-		};
-		var entryList = new List('entry-list', options);
+
             
         
         });
