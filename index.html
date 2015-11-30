@@ -64,12 +64,9 @@ function myFunction(arr) {
 			out += ' eiwit: '+eiwit;
 			out += ' koolhydraat: '+koolhydraat;
 			out += '<div style="clear: both"></div> ';
-		}
-	
+	}
+	out += '</ul>';
     }
-    out += '<li>';
-    out += '<br><br><span style=color:red;>red: unknown ingredient, nutrient information is not available.</span>';
-    out += '</li></ul>';
     //out += '<br><br>------<br>Debug information<br>------<br>'+arr.toSource();
     document.getElementById("id01").innerHTML = out;
 }
@@ -125,6 +122,7 @@ function myAjax() {
 	
 }
 </script>
+<br><br><span style=color:red;>red: </span>unknown ingredient, nutrient information is not available.
 <br><br>
 <div><h2><b>Oude Gerechten: </b></h2><br></div>
 <br>
