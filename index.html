@@ -63,10 +63,12 @@ function myFunction(arr) {
 			out += ' vet: '+vet;
 			out += ' eiwit: '+eiwit;
 			out += ' koolhydraat: '+koolhydraat;
-			out += '<div style="clear: both"></div> ';
+			
 	}
-	out += '</ul>';
+	
     }
+    out += '</li> ';
+    out += '</ul>';
     //out += '<br><br>------<br>Debug information<br>------<br>'+arr.toSource();
     document.getElementById("id01").innerHTML = out;
 }
