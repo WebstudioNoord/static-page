@@ -56,7 +56,7 @@
 <div id="entry-list">	
 {% if page.is_post %}
 hi
-<pre>{{page}}</pre>
+<pre>{{page | json }}</pre>
 <script>console.log('hi');</script>
 {% else %}
     <div class="row" style="margin-bottom:10px;">
