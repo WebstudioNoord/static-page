@@ -62,6 +62,15 @@
 	</div>
     </div>
 {% endif %}
+
+{% if page.is_recipe %}
+{% else %}
+    <div class="row" style="margin-bottom:10px;">
+    	<div class="container">
+		<input type="text" class="search form-control" placeholder="Zoeken" />
+	</div>
+    </div>
+{% endif %}
 {{ content }}
 </div>
 </div><!-- /.container -->
