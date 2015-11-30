@@ -65,9 +65,11 @@ function myFunction(arr) {
 			out += ' koolhydraat: '+koolhydraat;
 			out += '<div style="clear: both"></div> ';
 		}
-	out += '</li>';
+	
     }
+    out += '<ul>';
     out += '<br><br><span style=color:red;>red: unknown ingredient, nutrient information is not available.</span>';
+    out += '</ul></li>';
     //out += '<br><br>------<br>Debug information<br>------<br>'+arr.toSource();
     document.getElementById("id01").innerHTML = out;
 }
