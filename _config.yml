@@ -6,7 +6,7 @@ collections:
 defaults:
   - scope:
       path: "" # an empty string here means all files in the project
-      type: "recipes" # previously `post` in Jekyll 2.2.
+      type: "posts, recipes" # previously `post` in Jekyll 2.2.
     values:
       layout: "default"
       is_recipe: true # automatically set is_recipe=true for all recipes
