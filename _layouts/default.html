@@ -58,7 +58,7 @@
 
 hi
 <script>console.log('hi');</script>
-<script>console.log(page);</script>
+<script>console.log({{ pagel }});</script>
 {% else %}
     <div class="row" style="margin-bottom:10px;">
     	<div class="container">
@@ -66,8 +66,6 @@ hi
 	</div>
     </div>
 {% endif %}
-
-<script>console.log(self.data);</script>
 
 {{ content }}
 </div>
