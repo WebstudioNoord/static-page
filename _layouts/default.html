@@ -55,8 +55,18 @@
         <div class="container">
 <div id="entry-list">	
 {% if page.is_post %}
+
+{% assign name = 'melk' %}
+
+{% for ingredient in site.ingredients %}
+  {% if ingredient == name %}
+  <p>Melk!{{ingredient.vet}}</p>
+  {% endif %}
+{% endfor %}
+<br>----------<br><br>
 hi
 {{page}}
+
 <script>console.log('hi');</script>
 {% else %}
     <div class="row" style="margin-bottom:10px;">
