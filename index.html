@@ -38,17 +38,20 @@ function myFunction(arr) {
        
         var obj = ingredients;
         for (var prop in obj) {
-          // important check that this is objects own property 
-          // not from prototype prop inherited
-          if(obj.hasOwnProperty(prop)){
-            console.log('1:'+prop + " = " + obj[prop]);
-            console.log('2:'+JSON.stringify(ingr[prop]));
-            color="";
-	    vet += ingr[prop].vet*(obj[prop]/100);
-	    eiwit += ingr[prop].eiwit*(obj[prop]/100);
-	    koolhydraat += ingr[prop].koolhydraat*(obj[prop]/100);
+          color="red";
+          if (typeof ingr[prop] != "undefined") {
+            // important check that this is objects own property 
+            // not from prototype prop inherited
+            if(obj.hasOwnProperty(prop)){
+              console.log('1:'+prop + " = " + obj[prop]);
+              console.log('2:'+JSON.stringify(ingr[prop]));
+              color="";
+	      vet += ingr[prop].vet*(obj[prop]/100);
+	      eiwit += ingr[prop].eiwit*(obj[prop]/100);
+	      koolhydraat += ingr[prop].koolhydraat*(obj[prop]/100);
+            }
           }
-          out += " - <span style=color:"+color+";>" + prop+ ": " + JSON.stringify(obj[prop])+"</span>";
+          out += " - <span style=color:"+color+";>" + prop + ": " + obj[prop] + "</span>";
        }
         	
 			for(j = 0; j < ingredients.length; j++) {
