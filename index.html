@@ -42,8 +42,8 @@ function myFunction(arr) {
           // not from prototype prop inherited
           if(obj.hasOwnProperty(prop)){
             console.log('1:'+prop + " = " + obj[prop]);
-            console.log('2:'+JSON.stringify(ingr[prop]));
-            out += " - " + ingr[String(prop)].vet;
+            console.log('2:'+JSON.stringify(ingr[prop].vet));
+            out += " - " + ingr[prop].vet;
           }
        }
         	
