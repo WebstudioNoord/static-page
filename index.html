@@ -43,8 +43,12 @@ function myFunction(arr) {
           if(obj.hasOwnProperty(prop)){
             console.log('1:'+prop + " = " + obj[prop]);
             console.log('2:'+JSON.stringify(ingr[prop]));
-            out += " - " + JSON.stringify(ingr[prop].vet);
+            color="";
+	    vet += ingr[prop].vet*(obj[prop]/100);
+	    eiwit += ingr[prop].eiwit*(obj[prop]/100);
+	    koolhydraat += ingr[prop].koolhydraat*(obj[prop]/100);
           }
+          out += " - " <span style=color:"+color+";>" + JSON.stringify(prop)+ ": " + JSON.stringify(obj[prop])+"</span>";
        }
         	
 			for(j = 0; j < ingredients.length; j++) {
