@@ -59,7 +59,7 @@
 {% assign name = 'melk' %}
 
 {% for ingredient in site.ingredients %}
-  {% if ingredient == name %}
+  {% if ingredient.title == name %}
   <p>Melk!{{ingredient.vet}}</p>
   {% endif %}
 {% endfor %}
