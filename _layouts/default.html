@@ -56,6 +56,13 @@
 <div id="entry-list">	
 {% if page.is_post %}
 
+{% for ingredient in page.ingredients %}
+
+<p>{{ingredient.title}}</p>
+
+{% endfor %}
+
+
 {% assign name = 'melk' %}
 
 {% for ingredient in site.ingredients %}
