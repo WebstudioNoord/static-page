@@ -45,31 +45,31 @@ function myFunction(arr) {
 				koolhydraat += ingr[k].koolhydraat*(target[k]/100);
 			}
 			out += " - <span style=color:"+color+";>" + k + ": " + target[k]+"</span>";	
-			/*
-			target=ingredients[j];
-		        for (var k in target){
-				    if (target.hasOwnProperty(k)) {
-						color="red";
-						if (typeof ingr[k] != "undefined") {
-							color="";
-							vet += ingr[k].vet*(target[k]/100);
-							eiwit += ingr[k].eiwit*(target[k]/100);
-							koolhydraat += ingr[k].koolhydraat*(target[k]/100);
-						}
-						out += " - <span style=color:"+color+";>" + k + ": " + target[k]+"</span>";
-				    }
-				}
-				
-				/*
-				if (typeof ingr[ingredients[j]] != "undefined") {
-					 out += ' '+ingr[ingredients[j]].title;
-					 vet += ingr[ingredients[j]].vet;
-					 eiwit += ingr[ingredients[j]].eiwit;
-					 koolhydraat += ingr[ingredients[j]].koolhydraat;
-				}
-				*/
-			}
-			*/
+			
+			//target=ingredients[j];
+		        //for (var k in target){
+			//	    if (target.hasOwnProperty(k)) {
+			//			color="red";
+			//			if (typeof ingr[k] != "undefined") {
+			//				color="";
+			//				vet += ingr[k].vet*(target[k]/100);
+			//				eiwit += ingr[k].eiwit*(target[k]/100);
+			//				koolhydraat += ingr[k].koolhydraat*(target[k]/100);
+			//			}
+			//			out += " - <span style=color:"+color+";>" + k + ": " + target[k]+"</span>";
+			//	    }
+			//	}
+			//	
+			//	/*
+			//	if (typeof ingr[ingredients[j]] != "undefined") {
+			//		 out += ' '+ingr[ingredients[j]].title;
+			//		 vet += ingr[ingredients[j]].vet;
+			//		 eiwit += ingr[ingredients[j]].eiwit;
+			//		 koolhydraat += ingr[ingredients[j]].koolhydraat;
+			//	}
+			//	*/
+			//}
+			
 			out += ' vet: '+vet;
 			out += ' eiwit: '+eiwit;
 			out += ' koolhydraat: '+koolhydraat;
