@@ -35,66 +35,26 @@ function myFunction(arr) {
         var ingredients = arr[i].ingredients;
         //(typeof ingredients != "undefined") ? console.log(ingredients[0]) : null;
         if ((typeof ingredients != "undefined") /*&& (arr[i].title=='havermoutpap')*/){
-       
-        var obj = ingredients;
-        for (var prop in obj) {
-          color="red";
-          if (typeof ingr[prop] != "undefined") {
-            // important check that this is objects own property 
-            // not from prototype prop inherited
-            if(obj.hasOwnProperty(prop)){
-              console.log('1:'+prop + " = " + obj[prop]);
-              console.log('2:'+JSON.stringify(ingr[prop]));
-              color="";
-	      vet += ingr[prop].vet*(obj[prop]/100);
-	      eiwit += ingr[prop].eiwit*(obj[prop]/100);
-	      koolhydraat += ingr[prop].koolhydraat*(obj[prop]/100);
-            }
-          }
-          out += " - <span style=color:"+color+";>" + prop + ": " + obj[prop] + "</span>";
-       }
-        	
-			for(j = 0; j < ingredients.length; j++) {
-			//console.log('i:'+JSON.stringify(ingredients[j]));
+		var obj = ingredients;
+		for (var prop in obj) {
 			color="red";
-			/*
-			if (typeof ingr[k] != "undefined") {
-				color="";
-				vet += ingr[k].vet*(target[k]/100);
-				eiwit += ingr[k].eiwit*(target[k]/100);
-				koolhydraat += ingr[k].koolhydraat*(target[k]/100);
+			if (typeof ingr[prop] != "undefined") {
+				// important check that this is objects own property 
+				// not from prototype prop inherited
+				if(obj.hasOwnProperty(prop)){
+					//console.log('1:'+prop + " = " + obj[prop]);
+					//console.log('2:'+JSON.stringify(ingr[prop]));
+					color="";
+					vet += ingr[prop].vet*(obj[prop]/100);
+					eiwit += ingr[prop].eiwit*(obj[prop]/100);
+					koolhydraat += ingr[prop].koolhydraat*(obj[prop]/100);
+				}
 			}
-			out += " - <span style=color:"+color+";>" + k + ": " + target[k]+"</span>";	
-			*/
-			
-			//	target=ingredients[j];
-		        //	for (var k in target){
-			//	    if (target.hasOwnProperty(k)) {
-			//			color="red";
-			//			if (typeof ingr[k] != "undefined") {
-			//				color="";
-			//				vet += ingr[k].vet*(target[k]/100);
-			//				eiwit += ingr[k].eiwit*(target[k]/100);
-			//				koolhydraat += ingr[k].koolhydraat*(target[k]/100);
-			//			}
-			//			out += " - <span style=color:"+color+";>" + k + ": " + target[k]+"</span>";
-			//	    }
-			//	}
-			//	
-			//	/*
-			//	if (typeof ingr[ingredients[j]] != "undefined") {
-			//		 out += ' '+ingr[ingredients[j]].title;
-			//		 vet += ingr[ingredients[j]].vet;
-			//		 eiwit += ingr[ingredients[j]].eiwit;
-			//		 koolhydraat += ingr[ingredients[j]].koolhydraat;
-			//	}
-			//	*/
-			}
-			
-			out += ' vet: '+vet;
-			out += ' eiwit: '+eiwit;
-			out += ' koolhydraat: '+koolhydraat;
-			
+			out += " - <span style=color:"+color+";>" + prop + ": " + obj[prop] + "</span>";
+		}
+		out += ' vet: '+vet;
+		out += ' eiwit: '+eiwit;
+		out += ' koolhydraat: '+koolhydraat;
 	}
 	out += '</li> ';
     }
