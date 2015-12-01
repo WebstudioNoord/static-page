@@ -37,6 +37,10 @@ function myFunction(arr) {
         if (typeof ingredients != "undefined") {
         	
         	console.log('i:'+ingredients.length+':'+JSON.stringify(ingredients));
+        	for(key in ingredients) {
+        		console.log(ingredients[key]);
+        		
+        	}
 			for(j = 0; j < ingredients.length; j++) {
 			console.log('i:'+JSON.stringify(ingredients[j]));
 			color="red";
