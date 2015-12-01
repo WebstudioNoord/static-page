@@ -41,6 +41,7 @@ function myFunction(arr) {
         for (var prop in obj) {
           // important check that this is objects own property 
           // not from prototype prop inherited
+          console.log(prop);
           if(obj.hasOwnProperty(prop)){
             console.log(prop + " = " + obj[prop]);
           }
