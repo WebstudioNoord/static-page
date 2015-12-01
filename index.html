@@ -9,7 +9,7 @@ var ingr={};
 myAjax();
 	
 function myFunction(arr) {
-	console.log(arr.toSource());
+	//console.log(arr.toSource());
 	
     var out = "";
     var i;
@@ -46,8 +46,8 @@ function myFunction(arr) {
 			}
 			out += " - <span style=color:"+color+";>" + k + ": " + target[k]+"</span>";	
 			
-			//target=ingredients[j];
-		        //for (var k in target){
+			//	target=ingredients[j];
+		        //	for (var k in target){
 			//	    if (target.hasOwnProperty(k)) {
 			//			color="red";
 			//			if (typeof ingr[k] != "undefined") {
@@ -84,14 +84,14 @@ function myFunction(arr) {
 }
 
 function objArrToIdxArr(arr) {
-	console.log(arr.toSource());
+	//console.log(arr.toSource());
 	
     var out = "";
     var i;
     for(i = 0; i < arr.length; i++) {
 		ingr[arr[i].title]=arr[i]; 
     }
-    console.log(ingr['melk'].vet);
+    //console.log(ingr['melk'].vet);
 }
 	
 function myAjax() {
