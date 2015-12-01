@@ -13,6 +13,7 @@ function myFunction(arr) {
 	
     var out = "";
     var i;
+    /*
     out +='<ul class="list list-unstyled">';
     out +='<li style="margin: 5px;">';
     out +='<a href="/2015/11/08/first.html">';
@@ -22,7 +23,7 @@ function myFunction(arr) {
     out +='<span class="title">Tomatensoep</span>';
     out +='</a>';
     out +='</li>';
-    
+    */
     for(i = 0; i < arr.length; i++) {
 		var vet=0,eiwit=0,koolhydraat=0;
 	out += '<li style="margin: 5px;">';
@@ -116,6 +117,7 @@ function myAjax() {
 }
 </script>
 <br><br><span style=color:red;>red: </span>unknown ingredient, nutrient information is not available.
+<!--
 <br><br>
 <div><h2><b>Oude Gerechten: </b></h2><br></div>
 <br>
@@ -124,6 +126,7 @@ function myAjax() {
       <a href="{{ post.url }}"><span style="display: inline-block;width: 100px;margin-right: 10px;">{% if post.image %}<img src="{{ post.image }}" style="max-width: 100px;max-height: 69px;">{% endif %}</span><span class="title">{{ post.title }}</span></a>
     </li>
 {% endfor %}
+-->
 <!-- </ul> -->
 <!--
 {% for i in (1..10) %}
