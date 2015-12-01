@@ -34,7 +34,7 @@ function myFunction(arr) {
         //out += arr[i].nutrients + '<br>';
         var ingredients = arr[i].ingredients;
         //(typeof ingredients != "undefined") ? console.log(ingredients[0]) : null;
-        if ((typeof ingredients != "undefined") && (arr[i].title=='havermoutpap')){
+        if ((typeof ingredients != "undefined") /*&& (arr[i].title=='havermoutpap')*/){
        
         var obj = ingredients;
         for (var prop in obj) {
