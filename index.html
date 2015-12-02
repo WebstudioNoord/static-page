@@ -55,7 +55,8 @@ function myFunction(arr) {
 					koolhydraat += ingr[prop].koolhydraat*(obj[prop]/100);
 				}
 			}
-			if (color=="red") {missingIngredients=1;outAfter += " - <span style=color:"+color+";>" + prop + ": " + obj[prop] + "</span>";}
+			//if (color=="red") {missingIngredients=1;outAfter += " - <span style=color:"+color+";>" + prop + ": " + obj[prop] + "</span>";}
+			if (color=="red") {missingIngredients=1;outAfter += " - <span style=color:"+color+";>" + prop + "</span>";}
 		}
 		out += ' vet: '+vet;
 		out += ' eiwit: '+eiwit;
