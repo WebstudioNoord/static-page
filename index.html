@@ -60,13 +60,10 @@ function myFunction(arr) {
 		out += ' vet: '+vet;
 		out += ' eiwit: '+eiwit;
 		out += ' koolhydraat: '+koolhydraat;
+		if (missingIngredients==1) { out += outAfter; }
 	}
-	if (missingIngredients==1) {
-    		out += '<br><br><span style=color:red;>red: </span>unknown ingredient, nutrient information is not available.';
-    	}
 	out += '</li> ';
     }
-    
     out += '</ul>';
     if (missingIngredients==1) {
     	out += '<br><br><span style=color:red;>red: </span>unknown ingredient, nutrient information is not available.';
