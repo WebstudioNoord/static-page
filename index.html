@@ -12,6 +12,7 @@ function myFunction(arr) {
 	//console.log(arr.toSource());
 	
     var out = "";
+    var outAfter = "";
     var i;
     var missingIngredients=0;
 
@@ -38,10 +39,6 @@ function myFunction(arr) {
         var ingredients = arr[i].ingredients;
         //(typeof ingredients != "undefined") ? console.log(ingredients[0]) : null;
         if ((typeof ingredients != "undefined") /*&& (arr[i].title=='havermoutpap')*/){
-        	out += ' vet: '+vet;
-		out += ' eiwit: '+eiwit;
-		out += ' koolhydraat: '+koolhydraat;
-		
 		var obj = ingredients;
 		for (var prop in obj) {
 			color="red";
@@ -57,8 +54,11 @@ function myFunction(arr) {
 					koolhydraat += ingr[prop].koolhydraat*(obj[prop]/100);
 				}
 			}
-			if (color=="red") {missingIngredients=1;out += " - <span style=color:"+color+";>" + prop + ": " + obj[prop] + "</span>";}
+			if (color=="red") {missingIngredients=1;outAfter += " - <span style=color:"+color+";>" + prop + ": " + obj[prop] + "</span>";}
 		}
+		out += ' vet: '+vet;
+		out += ' eiwit: '+eiwit;
+		out += ' koolhydraat: '+koolhydraat;
 	}
 	out += '</li> ';
     }
@@ -68,7 +68,7 @@ function myFunction(arr) {
     	out += '<br><br><span style=color:red;>red: </span>unknown ingredient, nutrient information is not available.';
     }
     //out += '<br><br>------<br>Debug information<br>------<br>'+arr.toSource();
-    document.getElementById("id01").innerHTML = out;
+    document.getElementById("id01").innerHTML = out + outAfter;
 }
 
 function objArrToIdxArr(arr) {
