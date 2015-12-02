@@ -50,9 +50,9 @@ function myFunction(arr) {
 					//console.log('1:'+prop + " = " + obj[prop]);
 					//console.log('2:'+JSON.stringify(ingr[prop]));
 					color="";
-					vet += (ingr[prop].vet*(obj[prop]/100)).toString().toFixed(2);
-					eiwit += (ingr[prop].eiwit*(obj[prop]/100)).toString().toFixed(2;
-					koolhydraat += {ingr[prop].koolhydraat*(obj[prop]/100).toString().toFixed(2);
+					vet += +(ingr[prop].vet*(obj[prop]/100)).toFixed(2);
+					eiwit += +(ingr[prop].eiwit*(obj[prop]/100)).toFixed(2;
+					koolhydraat += +(ingr[prop].koolhydraat*(obj[prop]/100).toFixed(2);
 				}
 			}
 			//if (color=="red") {missingIngredients=1;outAfter += " - <span style=color:"+color+";>" + prop + ": " + obj[prop] + "</span>";}
