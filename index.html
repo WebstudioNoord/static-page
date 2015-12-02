@@ -58,9 +58,9 @@ function myFunction(arr) {
 			//if (color=="red") {missingIngredients=1;outAfter += " - <span style=color:"+color+";>" + prop + ": " + obj[prop] + "</span>";}
 			if (color=="red") {missingIngredients=1;outAfter += " - <span style=color:"+color+";>" + prop + "</span>";}
 		}
-		out += ' vet: '+vet.toFixed(2);
-		out += ' eiwit: '+eiwit.toFixed(2);
-		out += ' koolhydraat: '+koolhydraat.toFixed(2);
+		out += ' vet: ' + +vet.toFixed(2);
+		out += ' eiwit: ' + +eiwit.toFixed(2);
+		out += ' koolhydraat: ' + +koolhydraat.toFixed(2);
 		if (missingIngredients==1) { out += outAfter; }
 	}
 	out += '</li> ';
