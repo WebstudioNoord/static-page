@@ -55,7 +55,7 @@
         <div class="container">
 <div id="entry-list">	
 {% if page.is_post %}
-
+<p><br>Ingrediënten:</br></p>
 {% for ingredient in page.ingredients %}
 
 <p>{{ingredient[1]}} gr {{ingredient[0]}}</p>
@@ -70,6 +70,7 @@
   {% endif %}
 {% endfor %}
 
+<p><br>Bereiding:</br></p>
 {% else %}
     <div class="row" style="margin-bottom:10px;">
     	<div class="container">
