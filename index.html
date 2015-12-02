@@ -12,7 +12,6 @@ function myFunction(arr) {
 	//console.log(arr.toSource());
 	
     var out = "";
-    var outAfter = "";
     var i;
     var missingIngredients=0;
 
@@ -28,7 +27,9 @@ function myFunction(arr) {
     out +='</li>';
     */
     for(i = 0; i < arr.length; i++) {
-		var vet=0,eiwit=0,koolhydraat=0;
+	var vet=0,eiwit=0,koolhydraat=0;
+	var outAfter = "";
+	
 	out += '<li style="margin: 5px;">';
 	out += '<a href="http://staticgithubpage.tk'+arr[i].url+'">';
 	out += '<span style="display: inline-block;width: 100px;margin-right:10px">';
@@ -60,6 +61,9 @@ function myFunction(arr) {
 		out += ' eiwit: '+eiwit;
 		out += ' koolhydraat: '+koolhydraat;
 	}
+	if (missingIngredients==1) {
+    		out += '<br><br><span style=color:red;>red: </span>unknown ingredient, nutrient information is not available.';
+    	}
 	out += '</li> ';
     }
     
