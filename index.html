@@ -69,7 +69,7 @@ function myFunction(arr) {
     }
     out += '</ul>';
     if (missingIngredients==1) {
-    	out += '<br><br><span style=color:red;>red: </span>unknown ingredient, nutrient information is not available.';
+    	out += '<p><span style=color:red;>red: </span>unknown ingredient, nutrient information is not available.</p><p></p>';
     }
     //out += '<br><br>------<br>Debug information<br>------<br>'+arr.toSource();
     document.getElementById("id01").innerHTML = out;
@@ -127,7 +127,7 @@ function myAjax() {
 }
 </script>
 <p><b>Nieuw ingedient:</b></p>
-<textarea cols=40 rows=10>---
+<textarea cols=40 rows=7>---
 title: 
 koolhydraat: 
 vet: 
