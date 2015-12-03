@@ -1,5 +1,5 @@
 ---
-title: tjap tjoy
+title: tjap
 ingredients:
   ui: 50
   wortel: 50
