@@ -8,7 +8,7 @@ ingredients:
   champignons: 50
   bamboescheuten: 50
   paprika: 50
-  komkommer:50
+  komkommer: 50
   kip: 100
   prei: 50
   zout: 3
