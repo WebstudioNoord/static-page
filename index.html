@@ -61,7 +61,7 @@ function myFunction(arr) {
 		out += ' vet: ' + +vet.toFixed(2);
 		out += ' eiwit: ' + +eiwit.toFixed(2);
 		out += ' koolhydraat: ' + +koolhydraat.toFixed(2);
-		out += ' energie: ' + +((vet*2)+(eiwit*2)+(koolhydraat*2)).toFixed(2);
+		out += ' energie: ' + +(((vet*2)+(eiwit*2)+(koolhydraat*2))/2).toFixed(2);
 		if (missingIngredients==1) { out += outAfter; }
 	}
 	out += '</li> ';
