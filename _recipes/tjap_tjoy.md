@@ -23,10 +23,10 @@ ingredients:
   water: 250
   olie: 15
 ---
-blancheer de kip en groenten behalve ui en prei 4 minuten.
-bak de ui 1 minuut in de olie in de wok.
-bak de geblancheerde groenten en kip 1 minuut
-bak de prei 1 minuut
-voeg 250 ml water toe en breng aan de kook.
-bind alles met maiszetmeelpapje van maiszetmeel en 15 ml water.
-breng op smaak met: zout, ve-tsin, suiker, peper, rijstwijn, sesamolie en sojasaus.
+blancheer de kip en groenten behalve ui en prei 4 minuten.  
+bak de ui 1 minuut in de olie in de wok.  
+bak de geblancheerde groenten en kip 1 minuut.  
+bak de prei 1 minuut.  
+voeg 250 ml water toe en breng aan de kook.  
+bind alles met maiszetmeelpapje van maiszetmeel en 15 ml water.  
+breng op smaak met: zout, ve-tsin, suiker, peper, rijstwijn, sesamolie en sojasaus.  
