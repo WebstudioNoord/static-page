@@ -58,10 +58,10 @@ function myFunction(arr) {
 			//if (color=="red") {missingIngredients=1;outAfter += " - <span style=color:"+color+";>" + prop + ": " + obj[prop] + "</span>";}
 			if (color=="red") {missingIngredients=1;outAfter += " - <span style=color:"+color+";>" + prop + "</span>";}
 		}
-		out += ' vet: ' + +vet.toFixed(2);
-		out += ' eiwit: ' + +eiwit.toFixed(2);
-		out += ' koolhydraat: ' + +koolhydraat.toFixed(2);
-		out += ' energie: ' + +(((vet*2)+(eiwit*2)+(koolhydraat*2))/2).toFixed(2);
+		out += ' vet: ' + +(Math.round(vet*100)/100).toFixed(2);
+		out += ' eiwit: ' + +(Math.round(eiwit*100)/100).toFixed(2);
+		out += ' koolhydraat: ' + +(Math.round(koolhydraat*100)/100).toFixed(2);
+		out += ' energie: ' + +(Math.round((((vet*2)+(eiwit*2)+(koolhydraat*2))/2)*100)/100).toFixed(2);
 		if (missingIngredients==1) { out += outAfter; }
 	}
 	out += '</li> ';
