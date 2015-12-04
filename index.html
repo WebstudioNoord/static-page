@@ -55,8 +55,8 @@ function myFunction(arr) {
 					eiwit += (ingr[prop].eiwit*(obj[prop]/100));
 					koolhydraat += (ingr[prop].koolhydraat*(obj[prop]/100));
 				}
-			}
 			console.log(ingr[prop].title+'\n eiwit: ' + +eiwit.toFixed(2)+'\n vet: ' + +vet.toFixed(2)+'\n koolhydraat: ' + +koolhydraat.toFixed(2)+'\n energie: ' + +(((vet*9)+(eiwit*4)+(koolhydraat*4))/1).toFixed(2));
+			}
 			//if (color=="red") {missingIngredients=1;outAfter += " - <span style=color:"+color+";>" + prop + ": " + obj[prop] + "</span>";}
 			if (color=="red") {missingIngredients=1;outAfter += "-<span style=color:"+color+";>" + prop + "</span>";}
 		}
