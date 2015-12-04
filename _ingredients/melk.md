@@ -1,6 +1,6 @@
 ---
 title: melk
-vet: 10
-eiwit: 5
-koolhydraat: 7
+vet: 3.6
+eiwit: 3.4
+koolhydraat: 4.9
 ---
