@@ -55,7 +55,7 @@ function myFunction(arr) {
 					eiwit += (ingr[prop].eiwit*(obj[prop]/100));
 					koolhydraat += (ingr[prop].koolhydraat*(obj[prop]/100));
 				}
-			console.log('-----------------\n'+arr[i].title+'\n-----------------\n'+ingr[prop].title+' '+obj[prop]+' gr\n eiwit: ' + +(ingr[prop].eiwit*(obj[prop]/100)).toFixed(2)+'\n vet: ' + +(ingr[prop].vet*(obj[prop]/100)).toFixed(2)+'\n koolhydraat: ' + +(ingr[prop].koolhydraat*(obj[prop]/100)).toFixed(2)+'\n energie: ' + +((((ingr[prop].vet*(obj[prop]/100))*9)+((ingr[prop].eiwit*(obj[prop]/100))*4)+((ingr[prop].koolhydraat*(obj[prop]/100))*4))/1).toFixed(2));
+			console.log('-----------------\n'+arr[i].title+'\n-----------------\n'+ingr[prop].title+' '+obj[prop]+' gr:\n eiwit: ' + +(ingr[prop].eiwit*(obj[prop]/100)).toFixed(2)+'\n vet: ' + +(ingr[prop].vet*(obj[prop]/100)).toFixed(2)+'\n koolhydraat: ' + +(ingr[prop].koolhydraat*(obj[prop]/100)).toFixed(2)+'\n energie: ' + +((((ingr[prop].vet*(obj[prop]/100))*9)+((ingr[prop].eiwit*(obj[prop]/100))*4)+((ingr[prop].koolhydraat*(obj[prop]/100))*4))/1).toFixed(2));
 			}
 			//if (color=="red") {missingIngredients=1;outAfter += " - <span style=color:"+color+";>" + prop + ": " + obj[prop] + "</span>";}
 			if (color=="red") {missingIngredients=1;outAfter += "-<span style=color:"+color+";>" + prop + "</span>";}
