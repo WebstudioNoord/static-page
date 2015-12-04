@@ -35,7 +35,7 @@ function myFunction(arr) {
 	out += '<span style="display: inline-block;width: 100px;margin-right:10px">';
 	out += '<img style="max-width: 100px;max-height: 69px;" src="'+arr[i].image+'" />';
 	out += '</span>';
-	console.log('\n\n-----------------\n'+arr[i].title+'\n-----------------\n');
+	//console.log(arr[i]);
         out += '<span class="title">'+arr[i].title + '</span></a>';
         //out += arr[i].nutrients + '<br>';
         var ingredients = arr[i].ingredients;
@@ -55,7 +55,7 @@ function myFunction(arr) {
 					eiwit += (ingr[prop].eiwit*(obj[prop]/100));
 					koolhydraat += (ingr[prop].koolhydraat*(obj[prop]/100));
 				}
-			console.log(ingr[prop].title+'\n eiwit: ' + +eiwit.toFixed(2)+'\n vet: ' + +vet.toFixed(2)+'\n koolhydraat: ' + +koolhydraat.toFixed(2)+'\n energie: ' + +(((vet*9)+(eiwit*4)+(koolhydraat*4))/1).toFixed(2));
+			console.log('-----------------\n'+arr[i].title+'\n-----------------\n'+ingr[prop].title+'\n eiwit: ' + +(ingr[prop].eiwit*(obj[prop]/100)).toFixed(2)+'\n vet: ' + +(ingr[prop].vet*(obj[prop]/100).toFixed(2)+'\n koolhydraat: ' + +(ingr[prop].koolhydraat*(obj[prop]/100)).toFixed(2)+'\n energie: ' + +((((ingr[prop].vet*(obj[prop]/100))*9)+((ingr[prop].eiwit*(obj[prop]/100))*4)+((ingr[prop].koolhydraat*(obj[prop]/100))*4))/1).toFixed(2));
 			}
 			//if (color=="red") {missingIngredients=1;outAfter += " - <span style=color:"+color+";>" + prop + ": " + obj[prop] + "</span>";}
 			if (color=="red") {missingIngredients=1;outAfter += "-<span style=color:"+color+";>" + prop + "</span>";}
