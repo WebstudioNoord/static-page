@@ -73,7 +73,6 @@
 {% endfor %}
 
 <p><b>Bereiding:</b></p>
-<p><a href="#" class="btn btn-primary" role="button">Link Button</a></p>
 {% else %}
     <div class="row" style="margin-bottom:10px;">
     	<div class="container">
@@ -83,6 +82,13 @@
 {% endif %}
 
 {{ content }}
+
+{% if page.is_post %}
+<p><a href="https://github.com/WebstudioNoord/static-page/edit/gh-pages/_recipes/pizza_deeg.md" class="btn btn-primary" role="button">Edit</a></p>
+https://github.com/WebstudioNoord/static-page/edit/gh-pages/_recipes/pizza_deeg.md  
+{{ page }}
+{% endif %}
+
 </div>
 </div><!-- /.container -->
         
