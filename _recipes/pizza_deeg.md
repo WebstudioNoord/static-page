@@ -9,3 +9,5 @@ ingredients:
   suiker: 5
 ---
 Korte beschrijving bereiding
+
+Totaal gewicht gekneed deeg 350 gram
